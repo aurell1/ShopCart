@@ -21,12 +21,6 @@ if(isset($_POST["type"]) && $_POST["type"]=='add' && $_POST["product_qty"]>0)
         $new_product["product_name"] = $product_name; 
         $new_product["product_price"] = $price;
         
-        if(isset($_SESSION["cart_products"])){  //if session var already exist
-            if(isset($_SESSION["cart_products"][$new_product['product_code']])) //check item exist in products array
-            {
-                unset($_SESSION["cart_products"][$new_product['product_code']]); //unset old array item
-            }           
-        }
         $_SESSION["cart_products"][$new_product['product_code']] = $new_product; //update or create product session with new item  
     } 
 }
