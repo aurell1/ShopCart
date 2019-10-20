@@ -85,8 +85,22 @@ $products_item .= <<<EOT
 	</label>
 	
 	<label>
+		<span>Make</span>
+		<select name="product_make">
+		<option value="wood">Wood</option>
+		<option value="metal">Metal</option>
+		<option value="ceramic">Ceramic</option>
+		</select>
+	</label>
+	
+	<label>
 		<span>Quantity</span>
-		<input type="text" size="2" maxlength="2" name="product_qty" value="1" />
+		<input type="text" size="2" maxlength="2" name="product_qnty" value="1" />
+	</label>
+	
+	<label>
+		<span>Quality</span>
+		<input type="text" size="2" maxlength="2" name="product_qlty" value="0" />
 	</label>
 	
 	</fieldset>
