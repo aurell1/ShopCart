@@ -6,9 +6,6 @@ if(isset($_POST["type"]) && $_POST["type"]=='add' && $_POST["product_qty"]>0)
 	foreach($_POST as $key => $value){ //add all post vars to new_product array
 		$new_product[$key] = filter_var($value, FILTER_SANITIZE_STRING);
     }
-	//remove unecessary vars
-	unset($new_product['type']);
-	unset($new_product['return_url']); 
 	
     $statement = $mysqli->prepare("SELECT product_name, price FROM products WHERE product_code=? LIMIT 1");
     $statement->bind_param('s', $new_product['product_code']);
