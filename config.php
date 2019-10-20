@@ -4,11 +4,8 @@ $db_username = 'root';
 $db_password = '';
 $db_name = 'production';
 $db_host = 'localhost';
-$shippingcost      = 1.33; //shipping cost
-$taxes              = array( //List your Taxes percent here.
-                            'VAT' => 12, 
-                            'Service Tax' => 5
-                            );						
+$shippingcost      = 5.99; 
+$taxes              =  ['VAT' => 24,];						
 //connect to MySql						
 $mysqli = new mysqli($db_host, $db_username, $db_password,$db_name);						
 if ($mysqli->connect_error) {
