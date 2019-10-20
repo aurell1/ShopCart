@@ -86,7 +86,12 @@ $products_item .= <<<EOT
 	
 	<label>
 		<span>Quantity</span>
-		<input type="text" size="2" maxlength="2" name="product_qty" value="1" />
+		<input type="text" size="2" maxlength="2" name="product_qnty" value="1" />
+	</label>
+	
+	<label>
+		<span>Quality</span>
+		<input type="text" size="2" maxlength="2" name="product_qlty" value="0" />
 	</label>
 	
 	</fieldset>
