@@ -1,4 +1,6 @@
 <?php
+const EUR = 362;
+
 session_start();
 include_once("config.php");
 if(isset($_POST["type"]) && $_POST["type"]=='add' && $_POST["product_qty"]>0)
@@ -19,7 +21,7 @@ if(isset($_POST["type"]) && $_POST["type"]=='add' && $_POST["product_qty"]>0)
 		
 		//fetch product name, price from db and add to new_product array
         $new_product["product_name"] = $product_name; 
-        $new_product["product_price"] = $price;
+        $new_product["product_price"] = $price * EUR;
         
         $_SESSION["cart_products"][$new_product['product_code']] = $new_product; //update or create product session with new item  
     } 
